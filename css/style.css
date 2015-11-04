@@ -1,0 +1,12 @@
+#peopleImg{
+	float: left;
+	width: 1.5em;
+	margin-right: 0.8em;
+}
+
+	
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
+.ng-cloak, .x-ng-cloak,
+.ng-hide {
+    display: none !important;
+	}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EshopExample</title>
+	<meta http-equiv="X-UA-Compatible" content="IE-Edge">
+	<meta charset="UTF-8"> 
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body ng-app="eshop" ng-cloak>
+	<div class="container">
+		<div ng-controller="FooterHeaderController">
+<header ng-if= "footer()" >
+    <div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" ><img id="peopleImg" src="img/people.png"> 
+                        Customers</a>
+                    </div>
+                    <div>
+                        <ul class="nav navbar-nav">
+                            <li ng-class="{'active': navBarChosser  === '1'}"><a href="#/customers/1">Customers</a></li>
+                            <li ng-class="{'active': navBarChosser  === '2'}"><a href="#/orders/2">Orders</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+	</div>
+
+
+	
+
+		<div ng-view></div>
+	
+
+	<div ng-controller="FooterHeaderController">
+		<footer ng-if= "footer()" >
+			<div class="container">
+				<div class="container">
+					<p class="text-muted text-center"> {{ navBarEnabled }}Place sticky footer content here.</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+	</div>
+	<!-- Jquerry -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<!-- load angular via CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.js"></script>
+
+		<!-- Modules -->
+		<script type="text/javascript" src="app/app.js"></script>
+		<!-- Controllers -->
+		<script type="text/javascript" src="app/controllers/loginController.js"></script>
+		<script type="text/javascript" src="app/controllers/customersController.js"></script>
+		<script type="text/javascript" src="app/controllers/ordersController.js"></script>
+		<script type="text/javascript" src="app/controllers/customerOrdersController.js"></script>
+		<script type="text/javascript" src="app/controllers/footerHeaderController.js"></script>
+		<!-- Service -->
+		<script type="text/javascript" src="app/service/customersService.js"></script>
+	</body>
+	</html>
